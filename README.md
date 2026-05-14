@@ -13,7 +13,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-**Built for SSIP 2.0 Ideathon 2026 · RNGPIT**
+
 
 </div>
 
@@ -214,7 +214,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 👨‍💻 Authors
 
-Developed with ❤️ by students of **RNGPIT** for the **SSIP 2.0 Ideathon 2026**.
+Developed with ❤️ by [Meet Chauhan](https://github.com/meetchauhan17) and contributors.
 
 ---
 
