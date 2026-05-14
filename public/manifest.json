@@ -1,0 +1,20 @@
+{
+  "name": "SchemeBot India",
+  "short_name": "SchemeBot",
+  "description": "Find government schemes in your language — AI-powered, free",
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ],
+  "categories": ["government", "utilities", "education"],
+  "shortcuts": [
+    { "name": "Chat", "url": "/chat", "description": "Start AI chat" },
+    { "name": "Browse Schemes", "url": "/schemes", "description": "Browse all schemes" }
+  ]
+}

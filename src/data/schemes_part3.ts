@@ -1,0 +1,1123 @@
+import { Scheme } from "@/types";
+
+export const schemesPart3: Scheme[] = [
+  // EMPLOYMENT & LIVELIHOOD (51-60)
+  {
+    id: "emp-051",
+    name: "PM SVANidhi",
+    nameHindi: "पीएम स्वनिधि (स्ट्रीट वेंडर आत्मनिर्भर निधि)",
+    nameGujarati: "પીએમ સ્વનિધિ",
+    department: "MoHUA",
+    ministry: "Ministry of Housing and Urban Affairs",
+    category: "employment",
+    state: "all",
+    description: "Special micro-credit facility for Street Vendors to resume their livelihoods.",
+    descriptionHindi: "स्ट्रीट वेंडर्स के लिए सूक्ष्म ऋण।",
+    benefits: ["Collateral free loan up to ₹10K, ₹20K, and ₹50K in tranches", "7% interest subsidy", "Cashback on digital transactions"],
+    benefitAmount: "₹10,000 - ₹50,000 Loan",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["self-employed", "daily-wage"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must be a street vendor with Vending Certificate/ID card"]
+    },
+    documents: [
+      { name: "Aadhaar Card", mandatory: true, purpose: "ID (Must be linked to mobile)", howToGet: "UIDAI" },
+      { name: "Vending Certificate / LoR", mandatory: true, purpose: "Vendor Proof", howToGet: "Local Municipality" },
+      { name: "Bank Passbook", mandatory: true, purpose: "Loan credit", howToGet: "Bank" }
+    ],
+    howToApplySteps: [
+      "Visit pmsvanidhi.mohua.gov.in",
+      "Click on 'Apply for 10K/20K/50K Loan'",
+      "Verify mobile number with OTP",
+      "Fill application and upload documents",
+      "Submit to preferred bank branch"
+    ],
+    alternativeApply: "Visit nearest CSC or Bank Branch.",
+    officialLinks: {
+      apply: "https://pmsvanidhi.mohua.gov.in/",
+      checkStatus: "https://pmsvanidhi.mohua.gov.in/",
+      officialWebsite: "https://pmsvanidhi.mohua.gov.in/",
+      mobileApp: "https://play.google.com/store/apps/details?id=com.pmsvanidhi.app"
+    },
+    helpline: "1800-11-1979",
+    processingTime: "15-30 Days",
+    commonMistakes: ["Mobile not linked to Aadhaar", "Not having ULB generated Letter of Recommendation"],
+    deadline: null,
+    isActive: true,
+    tags: ["loan", "street vendor", "business", "micro credit"],
+    viewCount: 2200000,
+    lastUpdated: "2025-01-20T00:00:00Z"
+  },
+  {
+    id: "emp-052",
+    name: "Mudra Loan (PMMY)",
+    nameHindi: "मुद्रा योजना",
+    nameGujarati: "મુદ્રા યોજના",
+    department: "DFS",
+    ministry: "Ministry of Finance",
+    category: "employment",
+    state: "all",
+    description: "Provide loans up to 10 lakh to non-corporate, non-farm small/micro enterprises.",
+    descriptionHindi: "छोटे व्यवसायों के लिए 10 लाख तक का ऋण।",
+    benefits: ["Collateral free business loans", "Shishu (up to 50K), Kishore (50K-5L), Tarun (5L-10L)"],
+    benefitAmount: "Up to ₹10 Lakh Loan",
+    eligibility: {
+      minAge: 18,
+      maxAge: 65,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["business", "self-employed"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Should not be a defaulter to any bank"]
+    },
+    documents: [
+      { name: "Identity & Address Proof", mandatory: true, purpose: "KYC", howToGet: "Aadhaar/Voter ID" },
+      { name: "Business Proof", mandatory: true, purpose: "Enterprise ID", howToGet: "Udyam/Trade License" },
+      { name: "Project Report", mandatory: false, purpose: "For Kishore/Tarun", howToGet: "CA" }
+    ],
+    howToApplySteps: [
+      "Visit nearest Bank/NBFC branch",
+      "Ask for Mudra Loan application form",
+      "Submit with business plan and documents"
+    ],
+    alternativeApply: "Apply online via Udyamimitra portal or JanSamarth portal.",
+    officialLinks: {
+      apply: "https://www.jansamarth.in/business-loan-mudra",
+      checkStatus: "Bank portal",
+      officialWebsite: "https://www.mudra.org.in/"
+    },
+    helpline: "1800-180-1111",
+    processingTime: "15-45 Days",
+    commonMistakes: ["Bad credit score", "Applying for farm activities (not eligible)"],
+    deadline: null,
+    isActive: true,
+    tags: ["loan", "business", "startup", "mudra"],
+    viewCount: 3000000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-053",
+    name: "Startup India",
+    nameHindi: "स्टार्टअप इंडिया",
+    nameGujarati: "સ્ટાર્ટઅપ ઇન્ડિયા",
+    department: "DPIIT",
+    ministry: "Commerce and Industry",
+    category: "employment",
+    state: "all",
+    description: "Initiative to build a strong eco-system for nurturing innovation and Startups.",
+    descriptionHindi: "स्टार्टअप्स को बढ़ावा देने के लिए पहल।",
+    benefits: ["3-year income tax exemption", "Fast-track patent application", "Access to ₹10,000 Cr fund of funds"],
+    benefitAmount: "Tax Breaks & Funding Access",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["business"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Company incorporated < 10 years ago", "Turnover < ₹100 Cr", "Innovative product/service"]
+    },
+    documents: [
+      { name: "Incorporation Certificate", mandatory: true, purpose: "Company ID", howToGet: "MCA" },
+      { name: "Brief Pitch Deck", mandatory: true, purpose: "Innovation proof", howToGet: "Self" }
+    ],
+    howToApplySteps: [
+      "Visit startupindia.gov.in",
+      "Register an account",
+      "Apply for DPIIT Recognition by submitting company details and pitch deck"
+    ],
+    alternativeApply: "N/A",
+    officialLinks: {
+      apply: "https://www.startupindia.gov.in/",
+      checkStatus: "https://www.startupindia.gov.in/",
+      officialWebsite: "https://www.startupindia.gov.in/"
+    },
+    helpline: "1800-115-565",
+    processingTime: "2-3 Days for Recognition",
+    commonMistakes: ["Applying with a trading business (not eligible)"],
+    deadline: null,
+    isActive: true,
+    tags: ["startup", "business", "tax exemption", "innovation"],
+    viewCount: 800000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-054",
+    name: "Stand Up India",
+    nameHindi: "स्टैंड अप इंडिया",
+    nameGujarati: "સ્ટેન્ડ અપ ઇન્ડિયા",
+    department: "DFS",
+    ministry: "Ministry of Finance",
+    category: "employment",
+    state: "all",
+    description: "Bank loans for SC/ST and Women entrepreneurs to set up greenfield enterprises.",
+    descriptionHindi: "SC/ST और महिला उद्यमियों के लिए बैंक ऋण।",
+    benefits: ["Bank loan between ₹10 lakh and ₹1 Crore", "Low margin money requirement (15%)"],
+    benefitAmount: "₹10 Lakh - ₹1 Crore Loan",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["sc", "st"], // Also for women of all castes
+      occupation: ["business", "unemployed"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Only for SC/ST or Women", "Greenfield (first time) project only"]
+    },
+    documents: [
+      { name: "Caste Certificate (if applicable)", mandatory: false, purpose: "Eligibility", howToGet: "Tehsildar" },
+      { name: "Project Report", mandatory: true, purpose: "Business plan", howToGet: "CA" }
+    ],
+    howToApplySteps: [
+      "Visit standupmitra.in",
+      "Register and fill the application form",
+      "Select preferred bank"
+    ],
+    alternativeApply: "Visit bank branch directly or via Lead District Manager.",
+    officialLinks: {
+      apply: "https://www.standupmitra.in/",
+      checkStatus: "https://www.standupmitra.in/",
+      officialWebsite: "https://www.standupmitra.in/"
+    },
+    helpline: "1800-180-1111",
+    processingTime: "30-60 Days",
+    commonMistakes: ["Applying for an existing business (must be greenfield)"],
+    deadline: null,
+    isActive: true,
+    tags: ["loan", "business", "sc st", "women entrepreneur"],
+    viewCount: 500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-055",
+    name: "Skill India / PMKVY",
+    nameHindi: "पीएम कौशल विकास योजना",
+    nameGujarati: "પીએમ કૌશલ વિકાસ યોજના",
+    department: "MSDE",
+    ministry: "Skill Development and Entrepreneurship",
+    category: "employment",
+    state: "all",
+    description: "Free industry-relevant skill training to secure a better livelihood.",
+    descriptionHindi: "मुफ्त कौशल प्रशिक्षण।",
+    benefits: ["Free training and certification", "Placement assistance", "₹500 reward on certification"],
+    benefitAmount: "Free Training + Job Assistance",
+    eligibility: {
+      minAge: 15,
+      maxAge: 45,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["unemployed", "student", "daily-wage"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["School/college dropouts preferred"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "Bank Account", mandatory: true, purpose: "Reward transfer", howToGet: "Bank" }
+    ],
+    howToApplySteps: [
+      "Register on skillindiadigital.gov.in",
+      "Find a PMKVY training center nearby",
+      "Enroll in preferred course",
+      "Complete training and clear assessment"
+    ],
+    alternativeApply: "Walk into any PMKK (Pradhan Mantri Kaushal Kendra).",
+    officialLinks: {
+      apply: "https://www.skillindiadigital.gov.in/",
+      checkStatus: "https://www.skillindiadigital.gov.in/",
+      officialWebsite: "https://www.pmkvyofficial.org/"
+    },
+    helpline: "1800-123-9626",
+    processingTime: "Immediate enrollment",
+    commonMistakes: ["Dropping out mid-course"],
+    deadline: null,
+    isActive: true,
+    tags: ["skills", "training", "jobs", "youth"],
+    viewCount: 1500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-056",
+    name: "National Urban Livelihoods Mission (DAY-NULM)",
+    nameHindi: "राष्ट्रीय शहरी आजीविका मिशन",
+    nameGujarati: "રાષ્ટ્રીય શહેરી આજીવિકા મિશન",
+    department: "MoHUA",
+    ministry: "MoHUA",
+    category: "employment",
+    state: "all",
+    description: "Reduce poverty and vulnerability of urban poor households.",
+    descriptionHindi: "शहरी गरीबों के लिए आजीविका।",
+    benefits: ["Subsidized loans (7% interest) up to ₹2 Lakh for individuals", "Skill training", "Support to Self Help Groups"],
+    benefitAmount: "Up to ₹2 Lakh Loan @ 7%",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["unemployed", "self-employed", "daily-wage"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must be an urban poor resident"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "BPL/Ration Card", mandatory: true, purpose: "Eligibility", howToGet: "Food Dept" }
+    ],
+    howToApplySteps: [
+      "Visit the local Municipal Corporation office (Urban Local Body)",
+      "Contact the City Mission Management Unit (CMMU)",
+      "Submit application for loan/training"
+    ],
+    alternativeApply: "Join an existing women's Self Help Group (SHG).",
+    officialLinks: {
+      apply: "Offline at ULB",
+      checkStatus: "N/A",
+      officialWebsite: "https://nulm.gov.in/"
+    },
+    helpline: "Local Municipality",
+    processingTime: "30-60 Days",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["urban", "poor", "loan", "shg", "business"],
+    viewCount: 400000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-057",
+    name: "National Rural Livelihoods Mission (DAY-NRLM)",
+    nameHindi: "राष्ट्रीय ग्रामीण आजीविका मिशन",
+    nameGujarati: "રાષ્ટ્રીય ગ્રામીણ આજીવિકા મિશન",
+    department: "Rural Development",
+    ministry: "MoRD",
+    category: "employment",
+    state: "all",
+    description: "Organizing rural poor women into Self Help Groups (SHGs) and providing financial support.",
+    descriptionHindi: "ग्रामीण महिलाओं को SHG से जोड़ना।",
+    benefits: ["Revolving fund of ₹10,000-₹15,000 per SHG", "Community Investment Fund up to ₹2.5 Lakh per SHG", "Bank linkages"],
+    benefitAmount: "Funding for SHGs",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "female", // Primarily focuses on women
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must be a rural resident", "Must form or join an SHG"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "SHG Resolution", mandatory: true, purpose: "Group formation", howToGet: "Self" }
+    ],
+    howToApplySteps: [
+      "Contact the local ASHA, Anganwadi worker, or Gram Panchayat",
+      "Form a group of 10-20 women",
+      "Open an SHG bank account",
+      "Block Mission Management Unit will grade the SHG for funds"
+    ],
+    alternativeApply: "N/A",
+    officialLinks: {
+      apply: "Offline via BDO",
+      checkStatus: "N/A",
+      officialWebsite: "https://nrlm.gov.in/"
+    },
+    helpline: "Gram Panchayat",
+    processingTime: "3-6 Months for grading",
+    commonMistakes: ["Irregular SHG meetings leading to low grading"],
+    deadline: null,
+    isActive: true,
+    tags: ["rural", "shg", "women", "business", "loan"],
+    viewCount: 600000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-058",
+    name: "Deen Dayal Antyodaya Yojana",
+    nameHindi: "दीन दयाल अंत्योदय योजना",
+    nameGujarati: "દીન દયાલ અંત્યોદય",
+    department: "MoHUA / MoRD",
+    ministry: "Joint",
+    category: "employment",
+    state: "all",
+    description: "Umbrella scheme comprising NRLM (Rural) and NULM (Urban) for poverty alleviation.",
+    descriptionHindi: "गरीबी उन्मूलन के लिए आजीविका मिशन।",
+    benefits: ["Skill training, SHG funding, and subsidized loans"],
+    benefitAmount: "Skill & Loan Support",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: []
+    },
+    documents: [],
+    howToApplySteps: ["See NRLM or NULM based on your location (Rural/Urban)"],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "N/A", officialWebsite: "https://nrlm.gov.in" },
+    helpline: "N/A",
+    processingTime: "N/A",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["poverty", "skills", "loan"],
+    viewCount: 100000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "emp-059",
+    name: "PM Vishwakarma Yojana",
+    nameHindi: "पीएम विश्वकर्मा योजना",
+    nameGujarati: "પીએમ વિશ્વકર્મા યોજના",
+    department: "MSME",
+    ministry: "Ministry of MSME",
+    category: "employment",
+    state: "all",
+    description: "Support to traditional artisans and craftspeople (carpenters, tailors, blacksmiths, etc).",
+    descriptionHindi: "पारंपरिक कारीगरों और शिल्पकारों को सहायता।",
+    benefits: ["PM Vishwakarma ID and Certificate", "₹15,000 toolkit incentive", "Collateral-free loan up to ₹3 lakh @ 5% interest", "₹500/day stipend during training"],
+    benefitAmount: "₹15K Toolkit + Up to ₹3L Loan",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["self-employed", "daily-wage"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must practice one of the 18 recognized traditional trades (e.g., Carpenter, Tailor, Barber)"]
+    },
+    documents: [
+      { name: "Aadhaar Card", mandatory: true, purpose: "ID & DBT", howToGet: "UIDAI" },
+      { name: "Bank Passbook", mandatory: true, purpose: "Fund transfer", howToGet: "Bank" },
+      { name: "Ration Card", mandatory: true, purpose: "Family verification", howToGet: "Food Dept" }
+    ],
+    howToApplySteps: [
+      "Visit nearest CSC (Common Service Centre)",
+      "Agent will register you on pmvishwakarma.gov.in using Aadhaar biometrics",
+      "Application is verified by Gram Panchayat/ULB in 3 tiers",
+      "Attend basic skill training (5-7 days)",
+      "Receive toolkit voucher and apply for loan"
+    ],
+    alternativeApply: "Self registration is not allowed, must visit CSC.",
+    officialLinks: {
+      apply: "https://pmvishwakarma.gov.in/",
+      checkStatus: "https://pmvishwakarma.gov.in/",
+      officialWebsite: "https://pmvishwakarma.gov.in/"
+    },
+    helpline: "1800-267-7777",
+    processingTime: "30-45 Days for verification",
+    commonMistakes: ["Aadhaar not linked to mobile number", "Family member is a govt employee"],
+    deadline: null,
+    isActive: true,
+    tags: ["artisan", "loan", "toolkit", "vishwakarma", "tailor", "carpenter"],
+    viewCount: 4500000,
+    lastUpdated: "2025-02-05T00:00:00Z"
+  },
+  {
+    id: "emp-060",
+    name: "Atal Innovation Mission",
+    nameHindi: "अटल इनोवेशन मिशन",
+    nameGujarati: "અટલ ઇનોવેશન મિશન",
+    department: "NITI Aayog",
+    ministry: "NITI Aayog",
+    category: "education",
+    state: "all",
+    description: "Promoting a culture of innovation and entrepreneurship.",
+    descriptionHindi: "नवाचार और उद्यमिता की संस्कृति को बढ़ावा देना।",
+    benefits: ["Atal Tinkering Labs in schools", "Atal Incubation Centers for startups with grant up to ₹10 Crore"],
+    benefitAmount: "Funding/Grants for Institutions",
+    eligibility: {
+      minAge: null,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Applies to Schools, Universities, and Startups"]
+    },
+    documents: [],
+    howToApplySteps: [
+      "Institutions apply on AIM portal when applications open."
+    ],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "https://aim.gov.in/", checkStatus: "N/A", officialWebsite: "https://aim.gov.in/" },
+    helpline: "N/A",
+    processingTime: "N/A",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["startup", "school", "innovation"],
+    viewCount: 100000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+
+  // INSURANCE & PENSION (61-68)
+  {
+    id: "ins-061",
+    name: "Pradhan Mantri Jeevan Jyoti Bima",
+    nameHindi: "प्रधानमंत्री जीवन ज्योति बीमा योजना",
+    nameGujarati: "પીએમ જીવન જ્યોતિ વીમા યોજના",
+    department: "DFS",
+    ministry: "Ministry of Finance",
+    category: "insurance",
+    state: "all",
+    description: "Life insurance scheme renewable from year to year, offering coverage for death due to any reason.",
+    descriptionHindi: "किसी भी कारण से मृत्यु पर 2 लाख का जीवन बीमा।",
+    benefits: ["₹2 lakh life insurance cover", "Auto-debit of ₹436 premium annually"],
+    benefitAmount: "₹2 Lakh Life Cover",
+    eligibility: {
+      minAge: 18,
+      maxAge: 50,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must have a bank account"]
+    },
+    documents: [
+      { name: "Aadhaar Card", mandatory: true, purpose: "ID", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "Visit your bank branch or use Internet Banking",
+      "Fill the PMJJBY consent form",
+      "₹436 will be auto-debited annually between May 25 and May 31"
+    ],
+    alternativeApply: "Via Post Office Payments Bank or CSC.",
+    officialLinks: {
+      apply: "At Bank",
+      checkStatus: "Bank passbook",
+      officialWebsite: "https://financialservices.gov.in/beta/en/pmjjby"
+    },
+    helpline: "1800-180-1111",
+    processingTime: "Instant",
+    commonMistakes: ["Not maintaining ₹436 balance in May causing policy lapse"],
+    deadline: null,
+    isActive: true,
+    tags: ["insurance", "life", "death", "pmjjby"],
+    viewCount: 2000000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-062",
+    name: "Pradhan Mantri Suraksha Bima",
+    nameHindi: "प्रधानमंत्री सुरक्षा बीमा योजना",
+    nameGujarati: "પીએમ સુરક્ષા વીમા યોજના",
+    department: "DFS",
+    ministry: "Ministry of Finance",
+    category: "insurance",
+    state: "all",
+    description: "Accident insurance scheme offering accidental death and disability cover.",
+    descriptionHindi: "दुर्घटना मृत्यु और विकलांगता कवर।",
+    benefits: ["₹2 lakh for accidental death or full disability", "₹1 lakh for partial disability", "Ultra low premium of ₹20/year"],
+    benefitAmount: "₹2 Lakh Accident Cover",
+    eligibility: {
+      minAge: 18,
+      maxAge: 70,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must have a bank account"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "Visit your bank branch or use Internet Banking",
+      "Consent to PMSBY auto-debit of ₹20/year",
+      "Policy renews automatically on June 1"
+    ],
+    alternativeApply: "Via CSC or Bank Mitra.",
+    officialLinks: {
+      apply: "At Bank",
+      checkStatus: "Bank Passbook",
+      officialWebsite: "https://financialservices.gov.in/beta/en/pmsby"
+    },
+    helpline: "1800-180-1111",
+    processingTime: "Instant",
+    commonMistakes: ["Not maintaining ₹20 balance in May"],
+    deadline: null,
+    isActive: true,
+    tags: ["insurance", "accident", "disability", "pmsby"],
+    viewCount: 2500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-063",
+    name: "Atal Pension Yojana",
+    nameHindi: "अटल पेंशन योजना",
+    nameGujarati: "અટલ પેન્શન યોજના",
+    department: "PFRDA",
+    ministry: "Ministry of Finance",
+    category: "pension",
+    state: "all",
+    description: "Guaranteed minimum pension scheme for the unorganized sector workers.",
+    descriptionHindi: "असंगठित क्षेत्र के लिए गारंटीड पेंशन।",
+    benefits: ["Guaranteed pension of ₹1000 to ₹5000 per month after age 60", "Spouse gets same pension after subscriber's death"],
+    benefitAmount: "Up to ₹5,000/month after age 60",
+    eligibility: {
+      minAge: 18,
+      maxAge: 40,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Taxpayers are not eligible to join (effective Oct 2022)"]
+    },
+    documents: [
+      { name: "Aadhaar Card", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "Bank Account Details", mandatory: true, purpose: "Auto-debit", howToGet: "Bank" }
+    ],
+    howToApplySteps: [
+      "Approach the bank branch where you have an account",
+      "Fill APY registration form with nominee details",
+      "Choose pension amount (1K to 5K) and premium frequency",
+      "Ensure sufficient balance for auto-debit"
+    ],
+    alternativeApply: "Apply online via Netbanking.",
+    officialLinks: {
+      apply: "At Bank",
+      checkStatus: "https://www.npscra.nsdl.co.in/nsdl/scheme-details/APY_Scheme_Details.pdf",
+      officialWebsite: "https://www.npscra.nsdl.co.in/scheme-details.php"
+    },
+    helpline: "1800-110-069",
+    processingTime: "Instant",
+    commonMistakes: ["Joining at age 39 and missing premium dates"],
+    deadline: null,
+    isActive: true,
+    tags: ["pension", "retirement", "savings"],
+    viewCount: 3000000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-064",
+    name: "PM Jan Dhan Yojana",
+    nameHindi: "पीएम जन धन योजना",
+    nameGujarati: "પીએમ જન ધન યોજના",
+    department: "DFS",
+    ministry: "Ministry of Finance",
+    category: "insurance",
+    state: "all",
+    description: "National Mission for Financial Inclusion to ensure access to banking facilities.",
+    descriptionHindi: "वित्तीय समावेशन के लिए शून्य बैलेंस बैंक खाता।",
+    benefits: ["Zero balance savings account", "Free RuPay debit card", "In-built ₹2 Lakh accident insurance", "₹10,000 overdraft facility"],
+    benefitAmount: "Zero Balance Account + Insurance",
+    eligibility: {
+      minAge: 10,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Unbanked individuals"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "eKYC", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "Visit any bank branch or Bank Mitra/CSP",
+      "Fill PMJDY account opening form",
+      "Submit Aadhaar copy"
+    ],
+    alternativeApply: "Via Bank Mitra/Business Correspondent in villages.",
+    officialLinks: {
+      apply: "At Bank",
+      checkStatus: "N/A",
+      officialWebsite: "https://pmjdy.gov.in/"
+    },
+    helpline: "1800-11-0001",
+    processingTime: "Instant to 2 Days",
+    commonMistakes: ["Not using RuPay card once in 90 days (invalidates the free insurance)"],
+    deadline: null,
+    isActive: true,
+    tags: ["bank", "account", "zero balance", "rupay"],
+    viewCount: 4000000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-065",
+    name: "Pradhan Mantri Vaya Vandana Yojana",
+    nameHindi: "प्रधानमंत्री वय वंदना योजना",
+    nameGujarati: "પીએમ વય વંદના",
+    department: "DFS / LIC",
+    ministry: "Ministry of Finance",
+    category: "pension",
+    state: "all",
+    description: "Pension scheme exclusively for senior citizens aged 60 and above.",
+    descriptionHindi: "वरिष्ठ नागरिकों के लिए पेंशन।",
+    benefits: ["Assured return of 7.4% p.a.", "Pension payable monthly, quarterly, half-yearly or yearly"],
+    benefitAmount: "Up to ₹9,250/month pension",
+    eligibility: {
+      minAge: 60,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: []
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "Bank Details", mandatory: true, purpose: "Pension credit", howToGet: "Bank" }
+    ],
+    howToApplySteps: [
+      "Visit LIC office or website",
+      "Purchase policy by paying lumpsum amount (max 15 lakh)"
+    ],
+    alternativeApply: "Online via LIC.",
+    officialLinks: {
+      apply: "https://licindia.in/",
+      checkStatus: "https://licindia.in/",
+      officialWebsite: "https://licindia.in/"
+    },
+    helpline: "022-68276827",
+    processingTime: "Instant",
+    commonMistakes: [],
+    deadline: null, // Scheme window periodically extended
+    isActive: true,
+    tags: ["senior citizen", "pension", "investment"],
+    viewCount: 500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-066",
+    name: "National Social Assistance Programme",
+    nameHindi: "राष्ट्रीय सामाजिक सहायता कार्यक्रम",
+    nameGujarati: "રાષ્ટ્રીય સામાજિક સહાય કાર્યક્રમ",
+    department: "Rural Development",
+    ministry: "MoRD",
+    category: "social",
+    state: "all",
+    description: "Financial assistance to elderly, widows and persons with disabilities.",
+    descriptionHindi: "वृद्ध, विधवाओं और दिव्यांगों को वित्तीय सहायता।",
+    benefits: ["Monthly pension"],
+    benefitAmount: "₹200 - ₹500/month (Central share)",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must belong to BPL household"]
+    },
+    documents: [
+      { name: "BPL Card", mandatory: true, purpose: "Eligibility", howToGet: "Food dept" }
+    ],
+    howToApplySteps: ["Apply at Gram Panchayat / Municipality"],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "Offline", checkStatus: "https://nsap.nic.in/", officialWebsite: "https://nsap.nic.in/" },
+    helpline: "N/A",
+    processingTime: "Varies",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["pension", "bpl", "poor"],
+    viewCount: 800000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-067",
+    name: "Indira Gandhi National Old Age Pension",
+    nameHindi: "राष्ट्रीय वृद्धावस्था पेंशन",
+    nameGujarati: "વૃદ્ધાવસ્થા પેન્શન",
+    department: "Rural Development",
+    ministry: "MoRD",
+    category: "pension",
+    state: "all",
+    description: "Pension for BPL citizens above 60 years.",
+    descriptionHindi: "60 वर्ष से ऊपर के बीपीएल नागरिकों के लिए पेंशन।",
+    benefits: ["₹200/month (60-79 years)", "₹500/month (80+ years) - States add their own share"],
+    benefitAmount: "₹200 - ₹1000/month (with state share)",
+    eligibility: {
+      minAge: 60,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["BPL Category"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "Age & ID", howToGet: "UIDAI" },
+      { name: "BPL Certificate", mandatory: true, purpose: "Eligibility", howToGet: "Panchayat" }
+    ],
+    howToApplySteps: [
+      "Submit application to Gram Panchayat or Block Office (BDO)",
+      "Submit life certificate yearly"
+    ],
+    alternativeApply: "Apply online at state social welfare portals like SSPY (UP) or e-SamajKalyan (Gujarat)",
+    officialLinks: {
+      apply: "https://nsap.nic.in/",
+      checkStatus: "https://nsap.nic.in/",
+      officialWebsite: "https://nsap.nic.in/"
+    },
+    helpline: "N/A",
+    processingTime: "60 Days",
+    commonMistakes: ["Failing to submit annual Jeevan Pramaan (Life Certificate)"],
+    deadline: null,
+    isActive: true,
+    tags: ["pension", "old age", "bpl", "senior citizen"],
+    viewCount: 1500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "ins-068",
+    name: "Indira Gandhi National Widow Pension",
+    nameHindi: "राष्ट्रीय विधवा पेंशन",
+    nameGujarati: "વિધવા પેન્શન",
+    department: "Rural Development",
+    ministry: "MoRD",
+    category: "pension",
+    state: "all",
+    description: "Pension for BPL widows.",
+    descriptionHindi: "बीपीएल विधवाओं के लिए पेंशन।",
+    benefits: ["₹300/month Central share + State share"],
+    benefitAmount: "₹300 - ₹1500/month (with state share)",
+    eligibility: {
+      minAge: 40,
+      maxAge: null,
+      gender: "female",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must be a widow", "BPL Category"]
+    },
+    documents: [
+      { name: "Husband's Death Certificate", mandatory: true, purpose: "Eligibility", howToGet: "Panchayat/ULB" },
+      { name: "BPL Card", mandatory: true, purpose: "Eligibility", howToGet: "Food Dept" }
+    ],
+    howToApplySteps: [
+      "Submit application to Gram Panchayat or Municipality"
+    ],
+    alternativeApply: "Online via state portal",
+    officialLinks: { apply: "https://nsap.nic.in/", checkStatus: "https://nsap.nic.in/", officialWebsite: "https://nsap.nic.in/" },
+    helpline: "N/A",
+    processingTime: "60 Days",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["pension", "widow", "bpl", "women"],
+    viewCount: 900000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+
+  // SOCIAL WELFARE (69-75)
+  {
+    id: "soc-069",
+    name: "Antyodaya Anna Yojana",
+    nameHindi: "अंत्योदय अन्न योजना",
+    nameGujarati: "અંત્યોદય અન્ન યોજના",
+    department: "Food & Public Distribution",
+    ministry: "Consumer Affairs",
+    category: "social",
+    state: "all",
+    description: "Providing highly subsidized food grains to poorest of the poor.",
+    descriptionHindi: "सबसे गरीब लोगों को अत्यधिक रियायती खाद्यान्न।",
+    benefits: ["35 kg of food grains per household per month", "Rice at ₹3/kg, Wheat at ₹2/kg (Now free under PMGKAY)"],
+    benefitAmount: "35kg Free Ration/month",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Identified by State Govt as poorest of poor", "Landless labourers, marginal farmers, terminally ill"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" },
+      { name: "Income Certificate", mandatory: true, purpose: "Eligibility", howToGet: "Tehsildar" }
+    ],
+    howToApplySteps: [
+      "Apply at Gram Panchayat / Block Office for AAY Ration Card",
+      "Survey will be conducted",
+      "Yellow AAY Ration card is issued"
+    ],
+    alternativeApply: "N/A",
+    officialLinks: {
+      apply: "State specific food portals",
+      checkStatus: "https://nfsa.gov.in/",
+      officialWebsite: "https://dfpd.gov.in/"
+    },
+    helpline: "1967",
+    processingTime: "30-60 Days",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["food", "ration", "poor", "aay"],
+    viewCount: 1500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-070",
+    name: "PM Garib Kalyan Anna Yojana",
+    nameHindi: "पीएम गरीब कल्याण अन्न योजना",
+    nameGujarati: "પીએમ ગરીબ કલ્યાણ અન્ન યોજના",
+    department: "Food & Public Distribution",
+    ministry: "Consumer Affairs",
+    category: "social",
+    state: "all",
+    description: "Free food grains to NFSA beneficiaries.",
+    descriptionHindi: "NFSA लाभार्थियों को मुफ्त खाद्यान्न।",
+    benefits: ["5 kg free wheat/rice per person per month", "Extended till Dec 2028"],
+    benefitAmount: "5kg Free Grain/person",
+    eligibility: {
+      minAge: null,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must hold PHH or AAY Ration Card"]
+    },
+    documents: [
+      { name: "Ration Card", mandatory: true, purpose: "Eligibility", howToGet: "Food Dept" },
+      { name: "Aadhaar linked to Ration Card", mandatory: true, purpose: "Biometric auth at POS", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "No separate application. Automatically applied to existing Ration Card holders.",
+      "Authenticate biometrics at FPS (Ration Shop) and collect grains."
+    ],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "https://nfsa.gov.in/", officialWebsite: "https://dfpd.gov.in/" },
+    helpline: "1967",
+    processingTime: "Immediate at shop",
+    commonMistakes: ["Aadhaar biometrics not updating, causing POS machine failure"],
+    deadline: null,
+    isActive: true,
+    tags: ["food", "ration", "free", "pmgkay"],
+    viewCount: 5000000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-071",
+    name: "National Food Security Act",
+    nameHindi: "राष्ट्रीय खाद्य सुरक्षा अधिनियम",
+    nameGujarati: "રાષ્ટ્રીય ખાદ્ય સુરક્ષા",
+    department: "Food",
+    ministry: "Consumer Affairs",
+    category: "social",
+    state: "all",
+    description: "Legal right to cheap/free food grains.",
+    descriptionHindi: "सस्ते अनाज का कानूनी अधिकार।",
+    benefits: ["Subsidized food grains through PDS"],
+    benefitAmount: "Subsidized Grains",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: []
+    },
+    documents: [],
+    howToApplySteps: ["Apply for Priority Household (PHH) Ration card in state portal"],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "State Portals", checkStatus: "N/A", officialWebsite: "https://nfsa.gov.in/" },
+    helpline: "1967",
+    processingTime: "30 Days",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["ration", "food"],
+    viewCount: 300000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-072",
+    name: "One Nation One Ration Card",
+    nameHindi: "एक राष्ट्र एक राशन कार्ड",
+    nameGujarati: "વન નેશન વન રાશન કાર્ડ",
+    department: "Food",
+    ministry: "Consumer Affairs",
+    category: "social",
+    state: "all",
+    description: "Portability of food security benefits.",
+    descriptionHindi: "देश में कहीं भी राशन।",
+    benefits: ["Migrant workers can buy ration from any FPS across India using existing ration card"],
+    benefitAmount: "Ration Portability",
+    eligibility: {
+      minAge: null,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Ration card must be seeded with Aadhaar"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "Authentication", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "No application needed. Just use 'Mera Ration' App to locate nearest FPS and authenticate with Aadhaar."
+    ],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "N/A", officialWebsite: "https://impds.nic.in/" },
+    helpline: "14445",
+    processingTime: "Immediate",
+    commonMistakes: ["Family members' Aadhaar not fully seeded"],
+    deadline: null,
+    isActive: true,
+    tags: ["ration", "migrant", "food"],
+    viewCount: 800000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-073",
+    name: "PM Poshan",
+    nameHindi: "पीएम पोषण",
+    nameGujarati: "પીએમ પોષણ",
+    department: "Education",
+    ministry: "MoE",
+    category: "social",
+    state: "all",
+    description: "School meals.",
+    descriptionHindi: "स्कूली भोजन।",
+    benefits: ["Free meals"],
+    benefitAmount: "Free Meal",
+    eligibility: { minAge: 5, maxAge: 14, gender: "all", incomeLimit: null, caste: ["all"], occupation: ["student"], states: ["all"], familySize: null, additionalCriteria: [] },
+    documents: [],
+    howToApplySteps: ["Go to Govt School"],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "N/A", officialWebsite: "https://pmposhan.education.gov.in/" },
+    helpline: "N/A",
+    processingTime: "Immediate",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["school", "food"],
+    viewCount: 10000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-074",
+    name: "SVAMITVA Scheme",
+    nameHindi: "स्वामित्व योजना",
+    nameGujarati: "સ્વામિત્વ યોજના",
+    department: "Panchayati Raj",
+    ministry: "Ministry of Panchayati Raj",
+    category: "social",
+    state: "all",
+    description: "Provide Property Cards to rural household owners.",
+    descriptionHindi: "ग्रामीण घरों के मालिकों को संपत्ति कार्ड।",
+    benefits: ["Legal ownership of house", "Can be used as collateral for bank loans"],
+    benefitAmount: "Property Card Document",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Must own a house in populated area (Abadi) of the village"]
+    },
+    documents: [
+      { name: "Aadhaar", mandatory: true, purpose: "ID", howToGet: "UIDAI" }
+    ],
+    howToApplySteps: [
+      "Drones survey the village land",
+      "Panchayat verifies the mapping",
+      "Property Card is distributed in Gram Sabha"
+    ],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "N/A", officialWebsite: "https://svamitva.nic.in/" },
+    helpline: "N/A",
+    processingTime: "Dependent on drone survey schedule",
+    commonMistakes: ["Boundary disputes not resolved during Gram Sabha"],
+    deadline: null,
+    isActive: true,
+    tags: ["land", "property", "rural", "loan collateral"],
+    viewCount: 500000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  },
+  {
+    id: "soc-075",
+    name: "Jal Jeevan Mission",
+    nameHindi: "जल जीवन मिशन",
+    nameGujarati: "જલ જીવન મિશન",
+    department: "Drinking Water",
+    ministry: "Jal Shakti",
+    category: "social",
+    state: "all",
+    description: "Har Ghar Jal - Tap water to every rural household.",
+    descriptionHindi: "हर घर जल।",
+    benefits: ["Functional household tap connection (FHTC)"],
+    benefitAmount: "Free Tap Connection",
+    eligibility: {
+      minAge: 18,
+      maxAge: null,
+      gender: "all",
+      incomeLimit: null,
+      caste: ["all"],
+      occupation: ["any"],
+      states: ["all"],
+      familySize: null,
+      additionalCriteria: ["Rural household without tap connection"]
+    },
+    documents: [],
+    howToApplySteps: [
+      "Pass resolution in Gram Sabha",
+      "Village Water & Sanitation Committee executes the project"
+    ],
+    alternativeApply: "N/A",
+    officialLinks: { apply: "N/A", checkStatus: "N/A", officialWebsite: "https://jaljeevanmission.gov.in/" },
+    helpline: "N/A",
+    processingTime: "Varies",
+    commonMistakes: [],
+    deadline: null,
+    isActive: true,
+    tags: ["water", "rural", "infrastructure"],
+    viewCount: 1200000,
+    lastUpdated: "2025-01-01T00:00:00Z"
+  }
+];

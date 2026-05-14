@@ -1,0 +1,227 @@
+/* ── Design tokens MUST come before Tailwind ── */
+@import '../styles/design-tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════
+   INDUSTRIAL SKEUOMORPHISM — Global Styles
+   Chassis background, noise texture, mechanical resets
+   ═══════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  * {
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background-color: var(--surface-page);
+  }
+
+  body {
+    @apply font-sans;
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+    min-height: 100dvh;
+    overscroll-behavior-y: none;
+    /* Noise texture overlay — matte ABS plastic feel */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    background-repeat: repeat;
+  }
+
+  /* Remove mobile tap highlight */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Accessibility focus ring — accent glow */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  /* Noto Sans for Indic scripts */
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosans/v36/o-0bIpQlx3QUlC5A4PNb4g.woff2') format('woff2');
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MECHANICAL SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track {
+  background: var(--surface-recessed);
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+}
+::-webkit-scrollbar-thumb {
+  background: #a3b1c6;
+  border-radius: 4px;
+  border: 2px solid var(--surface-recessed);
+}
+::-webkit-scrollbar-thumb:hover { background: #8899b2; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   INDUSTRIAL UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Hide scrollbar but keep scroll functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Industrial card — bolted module */
+.industrial-card {
+  background-color: var(--surface-page);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+/* Corner screws — CSS radial gradient dots */
+.screw-corners::before,
+.screw-corners::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 35%, rgba(255,255,255,0.6) 15%, transparent 50%),
+    radial-gradient(circle at 60% 65%, rgba(0,0,0,0.2) 15%, transparent 50%),
+    #ccd0d8;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25), inset -1px -1px 1px rgba(255,255,255,0.5);
+  z-index: 2;
+}
+.screw-corners::before { top: 10px; left: 10px; }
+.screw-corners::after  { top: 10px; right: 10px; }
+
+/* Corner screws bottom pair via pseudo-element on a wrapper */
+.screw-corners-full {
+  position: relative;
+}
+.screw-corners-full::before,
+.screw-corners-full::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 35%, rgba(255,255,255,0.6) 15%, transparent 50%),
+    radial-gradient(circle at 60% 65%, rgba(0,0,0,0.2) 15%, transparent 50%),
+    #ccd0d8;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25), inset -1px -1px 1px rgba(255,255,255,0.5);
+  z-index: 2;
+}
+.screw-corners-full::before { top: 10px; left: 10px; }
+.screw-corners-full::after  { bottom: 10px; right: 10px; }
+
+/* Recessed input */
+.input-recessed {
+  background-color: var(--surface-page);
+  box-shadow: var(--shadow-recessed);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-jetbrains), monospace;
+  color: var(--text-primary);
+  outline: none;
+}
+.input-recessed::placeholder { color: var(--text-muted); opacity: 0.7; }
+.input-recessed:focus {
+  box-shadow: var(--shadow-recessed), 0 0 0 2px var(--color-accent);
+}
+
+/* LED indicator */
+.led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.led-green {
+  background-color: var(--color-success);
+  box-shadow: var(--shadow-glow-green);
+  animation: led-pulse 2s ease-in-out infinite;
+}
+.led-red {
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-glow-accent);
+  animation: led-red-pulse 2s ease-in-out infinite;
+}
+.led-amber {
+  background-color: var(--color-warning);
+  box-shadow: var(--shadow-glow-amber);
+}
+
+/* Streaming cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+/* Monospace label — "stamped" style */
+.label-mono {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary); /* default — override per context with style={{ color }} */
+}
+
+/* Dark hardware panel */
+.hardware-panel {
+  background-color: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+/* Mechanical button base */
+.btn-mechanical {
+  transition: all 150ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--shadow-floating);
+  cursor: pointer;
+  user-select: none;
+}
+.btn-mechanical:hover  { filter: brightness(1.05); }
+.btn-mechanical:active {
+  transform: translateY(2px);
+  box-shadow: var(--shadow-pressed);
+}
+
+/* Bottom nav safe area */
+.has-bottom-nav {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+}
+
+/* Print styles */
+@media print {
+  body * { visibility: hidden; }
+  .print-container, .print-container * { visibility: visible; }
+  .print-container { position: absolute; left: 0; top: 0; width: 100%; }
+  .no-print { display: none !important; }
+}

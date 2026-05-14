@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════════════
+   INDUSTRIAL SKEUOMORPHISM — Design Token System
+   Aesthetic: Braun/Teenage Engineering / ABS Plastic Chassis
+   Light Source: Top-Left at 45°
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── SURFACE MATERIALS ─────────────────────────────────────────── */
+  --surface-page:    #e0e5ec;   /* Level 0 — chassis base (matte ABS) */
+  --surface-panel:   #f0f2f5;   /* Level +1 — raised panel (slightly lighter) */
+  --surface-recessed:#d1d9e6;   /* Level -1 — machined groove / slot */
+  --surface-dark:    #2d3436;   /* Hardware panel (charcoal anodized) */
+  --surface-dark-2:  #2c3e50;   /* Deeper slate (secondary dark panels) */
+
+  /* ── TEXT ──────────────────────────────────────────────────────── */
+  --text-primary:    #2d3436;   /* High-contrast charcoal ink */
+  --text-secondary:  #4a5568;   /* WCAG-AA slate (labels, metadata) */
+  --text-muted:      #718096;   /* Tertiary — disabled, placeholders */
+  --text-on-dark:    #e0e5ec;   /* Text on dark hardware panels */
+  --text-on-accent:  #ffffff;   /* Text on accent buttons */
+
+  /* ── ACCENT — SAFETY RED ───────────────────────────────────────── */
+  --color-accent:    #ff4757;   /* Braun Red / safety orange — triggers only */
+  --color-accent-dark: #cc2f3e; /* Pressed accent (shadow tint) */
+  --color-success:   #22c55e;   /* LED green (online status) */
+  --color-danger:    #ff4757;   /* Same as accent — alerts, errors */
+  --color-warning:   #f59e0b;   /* LED amber (warning state) */
+
+  /* ── SHADOW PHYSICS (dual-RGB, top-left light source) ─────────── */
+  --shadow-dark:     #babecc;   /* Shadow half (bottom-right) */
+  --shadow-light:    #ffffff;   /* Highlight half (top-left) */
+  --shadow-dark-deep:#a3b1c6;   /* Deep border/divider shadow */
+
+  /* ── SHADOW LEVELS ─────────────────────────────────────────────── */
+  /* Level +1 — Standard card lift */
+  --shadow-card:
+    8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+
+  /* Level +2 — Floating controls (buttons, elevated cards) */
+  --shadow-floating:
+    12px 12px 24px var(--shadow-dark),
+    -12px -12px 24px var(--shadow-light),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* Level -1 — Recessed inputs / slots (shadow reverses) */
+  --shadow-recessed:
+    inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+
+  /* Active/pressed (deeper inset — button click) */
+  --shadow-pressed:
+    inset 6px 6px 12px var(--shadow-dark),
+    inset -6px -6px 12px var(--shadow-light);
+
+  /* Subtle mechanical edge (small components) */
+  --shadow-sharp:
+    4px 4px 8px rgba(0, 0, 0, 0.15),
+    -1px -1px 1px rgba(255, 255, 255, 0.8);
+
+  /* LED / Focus glow */
+  --shadow-glow-accent: 0 0 10px 2px rgba(255, 71, 87, 0.55);
+  --shadow-glow-green:  0 0 10px 2px rgba(34, 197, 94, 0.7);
+  --shadow-glow-amber:  0 0 10px 2px rgba(245, 158, 11, 0.6);
+
+  /* ── LAYOUT ────────────────────────────────────────────────────── */
+  --radius-sm:       4px;
+  --radius-md:       8px;
+  --radius-lg:       16px;
+  --radius-xl:       24px;
+  --radius-2xl:      32px;
+
+  --bottom-nav-height: 72px;
+
+  /* Navbar height — status bar (28px) + main nav (64px) = 92px */
+  --navbar-height: 92px;
+}
